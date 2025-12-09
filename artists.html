@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Художники | Современное Искусство Японии</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="artists.css">
+    <link rel="icon" type="image/png" href="MP/Cat-logo.png">
+</head>
+
+<body>
+    <!-- Header с навигацией -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Логотип и название -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="MP/Cat-logo.png" alt="Cat-logo" height="60" class="me-2">
+                </a>
+                
+                <!-- Кнопка бургер-меню -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Навигационные ссылки -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="artists.html">Художники</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mp.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="test.html">Тест</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="py-5">
+        <div class="container artists-container">
+            <!-- Заголовок -->
+            <div class="text-center mb-5">
+                <h1 class="artists-title display-3 fw-bold">Шесть влиятельных японских художников</h1>
+                <p class="artists-subtitle lead">
+                    Современные мастера, изменившие искусство
+                </p>
+            </div>
+
+            <!-- Сетка художников -->
+            <div class="row g-4">
+                <!-- Художник 1 -->
+                <div class="col-lg-6">
+                    <div class="artist-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="artist-image h-100">
+                                    <img src="Artists/1.svg" alt="Икенага Ясунари" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="artist-info p-4 h-100 d-flex flex-column">
+                                    <h3 class="artist-name">Икенага Ясунари</h3>
+                                    <p class="artist-years">Род. 1965</p>
+                                    <p class="artist-description flex-grow-1">
+                                        Известен своими портретами женщин в технике нихонга на золотых и серебряных листах.
+                                    </p>
+                                    <a href="ikenaga_gallery.html" class="artist-link">
+                                        Смотреть работы <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Художник 2 -->
+                <div class="col-lg-6">
+                    <div class="artist-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="artist-image h-100">
+                                    <img src="Artists/2.jpg" alt="Такаси Мураками" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="artist-info p-4 h-100 d-flex flex-column">
+                                    <h3 class="artist-name">Такаси Мураками</h3>
+                                    <p class="artist-years">Род. 1962</p>
+                                    <p class="artist-description flex-grow-1">
+                                        Создатель стиля "суперфлэт", сочетает аниме, поп-арт и традиционную японскую живопись.
+                                    </p>
+                                    <a href="murakami_gallery.html" class="artist-link">
+                                        Смотреть работы <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Художник 3 -->
+                <div class="col-lg-6">
+                    <div class="artist-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="artist-image h-100">
+                                    <img src="Artists/3.jpg" alt="Хидеаки Кавашима" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="artist-info p-4 h-100 d-flex flex-column">
+                                    <h3 class="artist-name">Хидеаки Кавашима</h3>
+                                    <p class="artist-years">Род. 1969</p>
+                                    <p class="artist-description flex-grow-1">
+                                        Современный нихонга художник, известен психоделическими пейзажами и мистическими образами.
+                                    </p>
+                                    <a href="kawashima_gallery.html" class="artist-link">
+                                        Смотреть работы <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Художник 4 -->
+                <div class="col-lg-6">
+                    <div class="artist-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="artist-image h-100">
+                                    <img src="Artists/4.jpg" alt="Чихару Шиота" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="artist-info p-4 h-100 d-flex flex-column">
+                                    <h3 class="artist-name">Чихару Шиота</h3>
+                                    <p class="artist-years">Род. 1972</p>
+                                    <p class="artist-description flex-grow-1">
+                                        Создает масштабные инсталляции из пряжи, исследуя память, тревогу и сны.
+                                    </p>
+                                    <a href="shiota_gallery.html" class="artist-link">
+                                        Смотреть работы <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Художник 5 -->
+                <div class="col-lg-6">
+                    <div class="artist-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="artist-image h-100">
+                                    <img src="Artists/5.png" alt="Юко Мохри" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="artist-info p-4 h-100 d-flex flex-column">
+                                    <h3 class="artist-name">Юко Мохри</h3>
+                                    <p class="artist-years">Род. 1980</p>
+                                    <p class="artist-description flex-grow-1">
+                                        Использует найденные объекты для инсталляций о миграции, торговле и культурном обмене.
+                                    </p>
+                                    <a href="mohri_gallery.html" class="artist-link">
+                                        Смотреть работы <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Художник 6 -->
+                <div class="col-lg-6">
+                    <div class="artist-card h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="artist-image h-100">
+                                    <img src="Artists/6.jpg" alt="Яёи Кусама" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="artist-info p-4 h-100 d-flex flex-column">
+                                    <h3 class="artist-name">Яёи Кусама</h3>
+                                    <p class="artist-years">Род. 1929</p>
+                                    <p class="artist-description flex-grow-1">
+                                        "Королева точек", создает иммерсивные инсталляции с повторяющимися узорами.
+                                    </p>
+                                    <a href="kusama_gallery.html" class="artist-link">
+                                        Смотреть работы <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <a href="test.html" class="footer-contact-btn btn mb-4">
+                    Тест
+                </a>
+                <p class="mb-2">Исследуй искусство Японии вместе с нами</p>
+                <p class="mb-2">© 2026 Проект "Современное Искусство Японии"</p>
+                <p class="footer-small">Сайт создан в учебных целях Cricliuc Daria</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

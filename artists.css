@@ -1,0 +1,255 @@
+/* ===== ОСНОВНЫЕ СТИЛИ ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    background: linear-gradient(135deg, #dddaec 0%, #bbe1f3 100%);
+    padding-top: 80px; /* Для фиксированного header */
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.navbar {
+    background-color: #bcf1f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 80px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #002f5b !important;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    color: #002f5b !important;
+    font-weight: 600;
+    padding: 10px 15px !important;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: #007FFF !important;
+    background-color: rgba(0, 127, 255, 0.1);
+    border-radius: 4px;
+}
+
+.navbar-toggler {
+    border-color: #002f5b;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 47, 91, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===== КОНТЕНТ ХУДОЖНИКОВ ===== */
+.artists-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.artists-title {
+    color: #002f5b;
+}
+
+.artists-subtitle {
+    color: #414141;
+    font-size: 1.5rem;
+}
+
+/* ===== КАРТОЧКИ ХУДОЖНИКОВ ===== */
+.artist-card {
+    background: white;
+    border: 2px solid #bcf1f9;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.artist-image {
+    overflow: hidden;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.artist-card:hover .artist-image img {
+    transform: scale(1.05);
+}
+
+.artist-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    color: #002f5b;
+    margin-bottom: 0.5rem;
+}
+
+.artist-years {
+    font-size: 1rem;
+    color: #007FFF;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.artist-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Ссылка на работы художника */
+.artist-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007FFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #007FFF;
+    transition: all 0.3s;
+    margin-top: auto;
+}
+
+.artist-link:hover {
+    color: #004891;
+    border-color: #004891;
+    gap: 1rem;
+}
+
+.artist-link i {
+    transition: transform 0.3s;
+}
+
+.artist-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    background-color: #1E213D;
+    padding: 3rem 0;
+    color: #A2ADD0;
+}
+
+.footer-contact-btn {
+    border: 2px solid #A2ADD0;
+    color: #A2ADD0;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s;
+}
+
+.footer-contact-btn:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-small {
+    font-size: 0.8rem;
+    color: #8a8fb5;
+    margin-top: 1.5rem;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .navbar {
+        height: 60px;
+    }
+    
+    .artists-title {
+        font-size: 2.5rem;
+    }
+    
+    .artists-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .artist-card {
+        border-radius: 10px;
+    }
+    
+    .artist-name {
+        font-size: 1.3rem;
+    }
+    
+    .artist-description {
+        font-size: 0.95rem;
+    }
+    
+    .artist-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .artists-title {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand span {
+        font-size: 0.9rem;
+    }
+    
+    /* На мобильных делаем вертикальную карточку */
+    .artist-card .row > div {
+        width: 100%;
+    }
+    
+    .artist-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .artists-title {
+        font-size: 1.7rem;
+    }
+    
+    .artists-subtitle {
+        font-size: 1rem;
+    }
+    
+    .artist-image {
+        height: 180px;
+    }
+    
+    .artist-info {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Специальные стили для очень маленьких устройств */
+@media (max-width: 360px) {
+    .artist-name {
+        font-size: 1.2rem;
+    }
+    
+    .artist-description {
+        font-size: 0.9rem;
+    }
+}
