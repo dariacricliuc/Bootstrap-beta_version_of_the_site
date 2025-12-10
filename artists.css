@@ -1,80 +1,118 @@
-/* ===== ОСНОВНЫЕ СТИЛИ ===== */
-* {
-    box-sizing: border-box;
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-    color: #000000;
+html { 
+    font-size: 25px; 
+}
+
+body { 
+    font-family: 'Times New Roman', Times, serif; 
+    color: #000000; 
     background: linear-gradient(135deg, #dddaec 0%, #bbe1f3 100%);
-    padding-top: 80px; /* Для фиксированного header */
 }
 
-/* ===== НАВИГАЦИЯ ===== */
-.navbar {
-    background-color: #bcf1f9;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.wrapper { 
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
     height: 80px;
+    background: #bcf1f9;
+    z-index: 1500;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: #002f5b !important;
-    font-size: 1.2rem;
+.menu {
+    width: 100%; 
+    height: 80px;
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
 }
 
-.nav-link {
-    color: #002f5b !important;
+.menu img { 
+    height: 80px; 
+    width: auto; 
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a { 
+    color: #002f5b; 
+    text-decoration: none; 
     font-weight: 600;
-    padding: 10px 15px !important;
-    transition: all 0.3s;
+    font-size: 20px;
+    padding: 8px 15px;
 }
 
-.nav-link:hover {
-    color: #007FFF !important;
-    background-color: rgba(0, 127, 255, 0.1);
-    border-radius: 4px;
+.main-nav a:hover {
+    background-color: #ACE5EE;
+    border-radius: 6px;
 }
 
-.navbar-toggler {
-    border-color: #002f5b;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 47, 91, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* ===== КОНТЕНТ ХУДОЖНИКОВ ===== */
-.artists-container {
-    max-width: 1100px;
-    margin: 0 auto;
+.artists-section {
+    max-width: 1100px; 
+    margin: 150px auto 80px;
+    padding: 0 20px;
 }
 
 .artists-title {
+    font-size: 70px;
+    text-align: center;
     color: #002f5b;
+    margin-bottom: 20px;
 }
 
 .artists-subtitle {
+    text-align: center;
+    font-size: 24px;
     color: #414141;
-    font-size: 1.5rem;
+    margin-bottom: 80px;
 }
 
-/* ===== КАРТОЧКИ ХУДОЖНИКОВ ===== */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+@media (max-width: 768px) {
+    .artists-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 .artist-card {
     background: white;
-    border: 2px solid #bcf1f9;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%;
+    border: 2px solid #bcf1f9;
+    transition: transform 0.3s;
 }
 
 .artist-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .artist-image {
+    width: 100%;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -82,174 +120,151 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.artist-card:hover .artist-image img {
-    transform: scale(1.05);
 }
 
 .artist-info {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    padding: 30px;
 }
 
-.artist-name {
-    font-size: 1.5rem;
+.artist-info h3 {
+    font-size: 32px;
     color: #002f5b;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
 }
 
 .artist-years {
-    font-size: 1rem;
+    font-size: 20px;
     color: #007FFF;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     font-style: italic;
 }
 
 .artist-description {
-    font-size: 1rem;
+    font-size: 20px;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
 }
 
-/* Ссылка на работы художника */
 .artist-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: inline-block;
     color: #007FFF;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 20px;
     font-weight: 600;
-    padding: 0.5rem 0;
+    padding: 10px 0;
     border-bottom: 2px solid #007FFF;
-    transition: all 0.3s;
-    margin-top: auto;
 }
 
 .artist-link:hover {
     color: #004891;
     border-color: #004891;
-    gap: 1rem;
 }
 
-.artist-link i {
-    transition: transform 0.3s;
+.footer { 
+    background: #1E213D; 
+    padding: 50px 0; 
+    text-align: center;
 }
 
-.artist-link:hover i {
-    transform: translateX(5px);
-}
-
-/* ===== ФУТЕР ===== */
-.footer {
-    background-color: #1E213D;
-    padding: 3rem 0;
+.content {
+    max-width: 1500px;
+    margin: 0 auto; 
+    padding: 0 20px; 
     color: #A2ADD0;
+    font-size: 20px;
 }
 
-.footer-contact-btn {
+.content a {
+    color: #A2ADD0;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 20px;
     border: 2px solid #A2ADD0;
-    color: #A2ADD0;
-    background-color: transparent;
-    padding: 0.5rem 1.5rem;
-    transition: all 0.2s;
+    border-radius: 6px;
 }
 
-.footer-contact-btn:hover {
+.content a:hover {
     color: #ffffff;
     border-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-small {
-    font-size: 0.8rem;
+.content p {
+    margin: 15px 0;
+}
+
+.content .small {
+    font-size: 16px;
     color: #8a8fb5;
-    margin-top: 1.5rem;
+    margin-top: 25px;
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
-    body {
-        padding-top: 60px;
-    }
-    
-    .navbar {
+    .menu {
         height: 60px;
+        padding: 0 15px;
+    }
+    
+    .menu img { 
+        height: 50px; 
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+    
+    .artists-section {
+        margin: 120px auto 50px;
     }
     
     .artists-title {
-        font-size: 2.5rem;
+        font-size: 40px;
     }
     
     .artists-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .artist-card {
-        border-radius: 10px;
-    }
-    
-    .artist-name {
-        font-size: 1.3rem;
-    }
-    
-    .artist-description {
-        font-size: 0.95rem;
-    }
-    
-    .artist-link {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .artists-title {
-        font-size: 2rem;
-    }
-    
-    .navbar-brand span {
-        font-size: 0.9rem;
-    }
-    
-    /* На мобильных делаем вертикальную карточку */
-    .artist-card .row > div {
-        width: 100%;
+        font-size: 20px;
+        margin-bottom: 50px;
     }
     
     .artist-image {
-        height: 200px;
-    }
-}
-
-@media (max-width: 400px) {
-    .artists-title {
-        font-size: 1.7rem;
-    }
-    
-    .artists-subtitle {
-        font-size: 1rem;
-    }
-    
-    .artist-image {
-        height: 180px;
+        height: 250px;
     }
     
     .artist-info {
-        padding: 1.5rem !important;
+        padding: 20px;
+    }
+    
+    .artist-info h3 {
+        font-size: 28px;
     }
 }
 
-/* Специальные стили для очень маленьких устройств */
-@media (max-width: 360px) {
-    .artist-name {
-        font-size: 1.2rem;
+@media (max-width: 480px) {
+    .artists-title {
+        font-size: 32px;
+    }
+    
+    .main-nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav a {
+        font-size: 16px;
+    }
+    
+    .artist-info h3 {
+        font-size: 24px;
     }
     
     .artist-description {
-        font-size: 0.9rem;
+        font-size: 18px;
     }
 }

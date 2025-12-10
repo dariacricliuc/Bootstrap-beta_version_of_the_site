@@ -1,0 +1,327 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { 
+    font-size: 25px; 
+}
+
+body { 
+    font-family: 'Times New Roman', Times, serif; 
+    color: #000000;
+    background-color: #f5f7fa;
+}
+
+.wrapper { 
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    height: 80px;
+    background: #bcf1f9;
+    z-index: 1500;
+}
+
+.menu {
+    width: 100%; 
+    height: 80px;
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.menu img { 
+    height: 80px; 
+    width: auto; 
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a { 
+    color: #002f5b; 
+    text-decoration: none; 
+    font-weight: 600;
+    font-size: 20px;
+    padding: 8px 15px;
+}
+
+.main-nav a:hover {
+    background-color: #ACE5EE;
+    border-radius: 6px;
+}
+
+.artist-gallery {
+    max-width: 1200px; 
+    margin: 150px auto 80px;
+    padding: 0 20px;
+}
+
+.artist-name {
+    font-size: 60px;
+    text-align: center;
+    color: #002f5b;
+    margin-bottom: 10px;
+}
+
+.artist-years {
+    text-align: center;
+    font-size: 24px;
+    color: #007FFF;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.artist-description {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.gallery-carousel {
+    margin-bottom: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carousel {
+    border-radius: 15px;
+}
+
+.carousel-inner {
+    border-radius: 15px;
+}
+
+.carousel-item img {
+    height: 1000px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 80%;
+}
+
+.carousel-caption h5 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 127, 255, 0.8);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 20px;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 127, 255, 1);
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #ACE5EE;
+}
+
+.carousel-indicators button.active {
+    background-color: #007FFF;
+}
+
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.back-link, .next-link {
+    color: #007FFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #007FFF;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.back-link:hover, .next-link:hover {
+    background-color: #007FFF;
+    color: white;
+}
+
+.footer { 
+    background: #1E213D; 
+    padding: 50px 0; 
+    text-align: center;
+}
+
+.content {
+    max-width: 1500px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+    color: #A2ADD0;
+    font-size: 20px;
+}
+
+.content a {
+    color: #A2ADD0;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border: 2px solid #A2ADD0;
+    border-radius: 6px;
+}
+
+.content a:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.content p {
+    margin: 15px 0;
+}
+
+.content .small {
+    font-size: 16px;
+    color: #8a8fb5;
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        height: 60px;
+        padding: 0 15px;
+    }
+    
+    .menu img { 
+        height: 50px; 
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+    
+    .artist-gallery {
+        margin: 120px auto 50px;
+    }
+    
+    .artist-name {
+        font-size: 40px;
+    }
+    
+    .artist-years {
+        font-size: 20px;
+    }
+    
+    .artist-description {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    
+    .carousel-item img {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        padding: 15px;
+        bottom: 20px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 22px;
+    }
+    
+    .carousel-caption p {
+        font-size: 16px;
+    }
+    
+    .navigation-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .back-link, .next-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-name {
+        font-size: 32px;
+    }
+    
+    .main-nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav a {
+        font-size: 16px;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 18px;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+}
